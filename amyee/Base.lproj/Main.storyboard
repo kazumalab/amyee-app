@@ -46,6 +46,7 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="clickButton" destination="CvY-vU-oup" eventType="touchUpInside" id="8Ab-jV-eet"/>
+                                    <segue destination="12C-fs-aDu" kind="presentation" id="bd1-79-mdA"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oog-s9-XYS">
@@ -67,6 +68,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UnW-Xr-aaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="669.60000000000002" y="33.733133433283363"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="j0y-RK-znz">
+            <objects>
+                <viewController id="12C-fs-aDu" userLabel="Second View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1DU-do-qet">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="znE-yJ-4L3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="17o-iR-Mbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1388" y="34"/>
         </scene>
     </scenes>
 </document>
