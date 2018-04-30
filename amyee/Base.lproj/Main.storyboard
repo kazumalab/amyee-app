@@ -44,6 +44,9 @@
                                 <rect key="frame" x="26" y="88" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="clickButton" destination="CvY-vU-oup" eventType="touchUpInside" id="8Ab-jV-eet"/>
+                                </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oog-s9-XYS">
                                 <rect key="frame" x="28" y="209" width="49" height="31"/>
