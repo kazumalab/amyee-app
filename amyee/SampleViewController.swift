@@ -9,9 +9,12 @@
 import UIKit
 
 class SampleViewController: UIViewController {
+    
+    @IBOutlet weak var label: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        label.text = "Hello World"
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
