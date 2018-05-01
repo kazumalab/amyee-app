@@ -65,10 +65,20 @@
         <!--Second View Controller-->
         <scene sceneID="j0y-RK-znz">
             <objects>
-                <viewController storyboardIdentifier="SecondViewController" id="12C-fs-aDu" userLabel="Second View Controller" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="12C-fs-aDu" userLabel="Second View Controller" customClass="SecondViewController" customModule="amyee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1DU-do-qet">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfq-ty-7rA">
+                                <rect key="frame" x="16" y="68" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="12C-fs-aDu" eventType="touchUpInside" id="r0c-gX-b3K"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="znE-yJ-4L3"/>
                     </view>
