@@ -23,8 +23,19 @@ class SampleViewController: UIViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    @IBAction func clickButton() {
+    @IBAction func clickButton(_ sender: UIButton) {
         label.text = "push button"
+    }
+    
+    @IBAction func clickSecondButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "presentSecondViewController", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let secondViewController = storyboard?.instantiateViewController(withIdentifier: "SecondViewController") else {
+            return
+        }
+        present(secondViewController, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
