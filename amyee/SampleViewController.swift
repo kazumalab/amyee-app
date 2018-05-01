@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SampleViewController: UIViewController {
+class SampleViewController: UIViewController, SecondViewControllerDelegate {
     
     @IBOutlet weak var label: UILabel!
 
@@ -23,8 +23,20 @@ class SampleViewController: UIViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    @IBAction func clickButton() {
+    func secondViewController(_ viewController: SecondViewController, didTapButton button: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func clickButton(_ sender: UIButton) {
         label.text = "push button"
+    }
+    
+    @IBAction func clickSecondButton(_ sender: UIButton) {
+        guard let secondViewController = storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController  else {
+            return
+        }
+        secondViewController.delegate = self
+        present(secondViewController, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
