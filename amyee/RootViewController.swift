@@ -8,13 +8,12 @@
 
 import UIKit
 
-class SampleViewController: UIViewController, SecondViewControllerDelegate {
+class RootViewController: UIViewController, SecondViewControllerDelegate {
     
     @IBOutlet weak var label: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = "Hello World"
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -29,6 +28,13 @@ class SampleViewController: UIViewController, SecondViewControllerDelegate {
     
     @IBAction func clickButton(_ sender: UIButton) {
         label.text = "push button"
+    }
+    
+    @IBAction func navClickButton(_ sender: UIButton) {
+        guard let rootViewController = storyboard?.instantiateViewController(withIdentifier: "RootViewController") as? RootViewController else {
+            return
+        }
+        navigationController?.pushViewController(rootViewController, animated: true)
     }
     
     @IBAction func clickSecondButton(_ sender: UIButton) {
